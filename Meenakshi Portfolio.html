@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakala Meenakshi Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    :root {
+            --primary-color: #0a6c74;
+            --secondary-color: #e6f0fa;
+            --accent-color: #ff7e5f;
+        }
+    body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+            color: #333;
+            line-height: 1.6;
+        }
+    h1, h2 {
+            color: var(--primary-color);
+        }
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 20px;
+      background-color: var(--secondary-color);
+      flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      animation: fadeInDown 1s;
+    }
+    .header-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      padding: 20px;
+    }
+    .header-left h1 {
+      font-size: 2.5em;
+      margin: 0;
+      color: var(--primary-color);
+    }
+    .header-left p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #555;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s;
+    }
+    .header-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .header-right img { 
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: fadeIn 1s;
+    }
+    .navigation {
+            background-color: var(--primary-color);
+            padding: 10px;
+            text-align: center;
+        }
+    .navigation ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+    .navigation li {
+            display:grid;
+            margin: 0 10px;
+        }
+    .navigation a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    .navigation a:hover {
+            background-color: var(--accent-color);
+        }
+    #about, #projects, #contact_me, #certificates, #activities {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: justify;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeInLeft 1s;
+        }
+    #education {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeInRight 1s;
+        }
+    #education table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            animation: fadeInUp 1s;
+        
+        }
+    form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2em 0;
+            animation: fadeInUp 1s;
+        }
+        
+    footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2em;
+            margin-top: 3em;
+        }
+        
+    .feedback {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+    }
+        .feedback form {
+            margin-top: 20px;
+        }
+        .feedback label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .feedback input,
+        .feedback textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .feedback textarea {
+            height: 100px;
+        }
+        .feedback button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .feedback button:hover {
+            background-color: #ff6a45;
+        }
+        #skills {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px;
+            animation: fadeInUp 1s;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flex-item {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5em;
+            margin: 1em 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.7s ease, box-shadow 0.7s ease;
+            flex: 1 1 calc(25% - 2em);
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .flex-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+    #contact {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        #contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #contact input, #contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #contact button {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #contact button:hover {
+            background-color: #ff6a45;
+        }
+  </style>
+</head>
+<body>
+  <div class="header-section animate__animated animate__fadeIn">
+  <div class="header-left">
+    <h1>Sakala Meenakshi</h1>
+    <p>Passionate AI/ML Developer | Lifelong Learner | Explorer of Tech</p>
+  </div>
+  <div class="header-right">
+    <img src="https://avatars.githubusercontent.com/u/123456789?v=4" alt="Profile Picture">
+  </div>
+  </div>
+
+  <div class="navigation">
+    <ul class="animate__animated animate__fadeInDown">
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact_me">Contact</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Feedback</a></li>
+    </ul>
+  </div>
+
+  <section id="about" class="animate__animated animate__fadeInLeft">
+    <h2>About Me</h2>
+    <p>I am Sakala Meenakshi, a passionate and driven student currently in my 3rd year of B.Tech in CSE (AI & ML) at KITS, Guntur.
+        I have a strong foundation in programming languages such as Java, C, and Python, along with expertise in SQL for database management.
+        My interests lie in exploring new technologies and applying AI & ML techniques to solve real-world problems. I am eager to learn and grow in the field of computer science.
+    </p>
+    </p>
+  </section>
+
+  <section id="projects" class="animate__animated animate__fadeInRight">
+    <h2>Projects</h2>
+    <ul>
+      <li>Contour AI - A clothing Image Generator</li>
+      <li>Anti-Drowsiness Helmet for two-wheeler Riders</li>
+      <li>Smart River Pollution Alert System using Arduino IDE</li>
+    </ul>
+  </section>
+
+  <section id="contact_me" class="animate__animated animate__fadeInUp">
+    <h2>Contact Me</h2>
+    <table>
+      <tr><th>Phone no.</th><td>+91 9491981215</td></tr>
+      <tr><th>Email</th><td><a href="mailto:sakalameenakshi13@gmail.com" style="color: var(--neon-cyan);">sakalameenakshi13@gmail.com</a></td></tr>
+      <tr><th>Address</th><td>Guntur, Andhra Pradesh</td></tr>
+      <tr><th>LinkedIn</th><td><a href="https://www.linkedin.com/in/meenakshi-sakala-a72407306" style="color: var(--neon-green);">linkedin.com</a></td></tr>
+    </table>
+  </section>
+
+  <section id="skills" class="animate__animated animate__fadeIn">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="flex-item">
+        <i class="fab fa-html5"></i>
+        <p>HTML</p>
+      </div>
+        <div class="flex-item">
+            <i class="fab fa-css3"></i>
+            <p>CSS</p>
+        </div>
+        <div class="flex-item">
+            <i class="fab fa-js"></i>
+            <p>JavaScript</p>
+        </div>
+        <div class="flex-item">
+            <i class="fab fa-java"></i>
+            <p>Java</p>
+        </div>
+        <div class="flex-item">
+            <i class="fab fa-python"></i>
+            <p>Python</p>
+        </div>
+        <div class="flex-item">
+            <i class="fas fa-database"></i>
+            <p>SQL</p>
+        </div>
+        <div class="flex-item">
+            <i class="fas fa-code"></i>
+            <p>Data Structures & Algorithms</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="education" class="animate__animated animate__fadeIn">
+    <h2>Education</h2>
+    <table border="2">
+      <tr><th>Degree</th><th>Institute</th><th>Year</th><th>CGPA</th></tr>
+      <tr><td>B.Tech in CSE - AI & ML</td><td>KITS, Guntur</td><td>2023-Present</td><td>8.45</td></tr>
+      <tr><td>Intermediate</td><td>Bhashyam Junior College</td><td>2021-2023</td><td>91.3 %</td></tr>
+      <tr><td>SSC</td><td>Bhashyam Educational Institutions</td><td>2020</td><td>100 %</td></tr>
+    </table>
+  </section>
+
+  <section id="certificates" class="animate__animated animate__fadeIn">
+    <h2>Certificates</h2>
+    <ul>
+      <li><b>Java (Basics)</b> - HackerRank</li>
+      <li><b>Python (Basics)</b> - HackerRank</li>
+      <li><b>PANDAS</b> - Kaggle</li>
+      <li><b>AI Fundamentals</b> - IBM SkillsBuild</li>
+      <li><b>Flipkart Launchpad Intern (Level 1)</b></li>
+    </ul>
+  </section>
+
+  <section id="activities" class="animate__animated animate__fadeIn">
+    <h2>Activities</h2>
+    <ul>
+      <li>Participated in Innovation Day 2k23 (Ideathon Project Expo)</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+        <h2>Contact Us</h2>
+        <form onsubmit="sendMessage(); return false;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <footer class="animate__animated animate__fadeIn">
+        <p>&copy; 2025 Meenakshi Portfolio</p>
+        <p>Follow me on 
+            <a href="https://www.linkedin.com/in/meenakshi-sakala-a72407306" style="color: var(--neon-green);">LinkedIn</a> 
+    </footer>
+</body>
+</html>
+<script>
+    function sendMessage() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (name && email && message) {
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        } else {
+            alert('Please fill in all fields.');
+        }
+    }
+</script>
